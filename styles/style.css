@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+/* For root scope, i.e. html scope, define the following CSS variables */
+:root {
+  --primary-color: #3a4052;
+}
+
+/* Setting property for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Properties for the body element */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+/* Icon and link properties */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Heading 1 property */
+h1 {
+  font-weight: 300;
+  font-size: 60px;
+
+  /* Line height has been changed so that there isn't too much space between text if they end up on 2 lines */
+  line-height: 1.2;
+
+  margin-bottom: 15px;
+}
