@@ -28,9 +28,37 @@ a {
 h1 {
   font-weight: 300;
   font-size: 60px;
-
   /* Line height has been changed so that there isn't too much space between text if they end up on 2 lines */
   line-height: 1.2;
-
   margin-bottom: 15px;
+}
+
+/* Properties of the showcase class */
+.showcase {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* background-color, background-image, background-repeat, background-position/backround-size  */
+  background: var(--primary-color) url("/resources/cover.jpg") no-repeat
+    center/cover;
+  z-index: 0;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 1;
 }
