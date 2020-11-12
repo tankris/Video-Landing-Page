@@ -38,12 +38,12 @@ h1 {
   position: relative;
   height: 100vh;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   padding: 0 20px;
 }
 
+/* Properties for the video */
 .video-container {
   position: absolute;
   top: 0;
@@ -57,14 +57,68 @@ h1 {
   z-index: 0;
 }
 
+/* Properties to make the video responsive to resizing the browser window */
 .video-container video {
   height: 100%;
   width: 100%;
+  /* This works similar to background-size: cover but requires the previous 2 properties to have an effect*/
   object-fit: cover;
 }
 
+/* Properties for the video decorative overlay */
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Properties for the content over the video */
 .content {
   text-align: center;
   color: white;
+  /* z-index has a higher value than the video in order to bring it to the front */
   z-index: 1;
+}
+
+/* Properties for the Read More button */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  border: 1px solid;
+  border-radius: 5px;
+  color: white;
+  margin-top: 2em;
+  opacity: 0.7;
+  padding: 10px 30px;
+}
+
+/* Hover property for the Read More button */
+.btn:hover {
+  opacity: 1;
+  transform: scale(0.98, 0.98);
+}
+
+/* Properties for the about section */
+#about {
+  padding: 40px;
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.2em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  margin: 30px 0;
+  color: var(--primary-color);
+}
+
+#about a {
+  margin: 10px;
 }
